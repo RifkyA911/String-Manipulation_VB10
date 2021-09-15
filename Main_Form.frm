@@ -2,17 +2,33 @@ VERSION 5.00
 Begin VB.Form Main_Form 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Kelompok 15 - 10 Manipulasi Data String"
-   ClientHeight    =   7545
+   ClientHeight    =   8670
    ClientLeft      =   45
    ClientTop       =   390
    ClientWidth     =   17220
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   8617.495
+   ScaleHeight     =   9902.41
    ScaleMode       =   0  'User
    ScaleWidth      =   16965.52
    StartUpPosition =   3  'Windows Default
+   Begin VB.TextBox Output_text 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   480
+      TabIndex        =   27
+      Top             =   3240
+      Width           =   12975
+   End
    Begin VB.TextBox Text2 
       BackColor       =   &H80000003&
       Enabled         =   0   'False
@@ -29,7 +45,7 @@ Begin VB.Form Main_Form
       Left            =   3480
       MousePointer    =   12  'No Drop
       TabIndex        =   25
-      Top             =   3840
+      Top             =   5040
       Width           =   4815
    End
    Begin VB.TextBox Text3 
@@ -48,7 +64,7 @@ Begin VB.Form Main_Form
       Left            =   7320
       TabIndex        =   22
       Text            =   "0"
-      Top             =   4680
+      Top             =   5880
       Width           =   975
    End
    Begin VB.CommandButton Reset_Command 
@@ -69,7 +85,7 @@ Begin VB.Form Main_Form
       Width           =   2655
    End
    Begin VB.CommandButton Command10 
-      Caption         =   "String"
+      Caption         =   "Right"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   12
@@ -82,11 +98,11 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   8760
       TabIndex        =   20
-      Top             =   6360
+      Top             =   7560
       Width           =   2655
    End
    Begin VB.CommandButton Command9 
-      Caption         =   "String"
+      Caption         =   "Left"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   12
@@ -99,11 +115,11 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   8760
       TabIndex        =   19
-      Top             =   5520
+      Top             =   6720
       Width           =   2655
    End
    Begin VB.CommandButton Command8 
-      Caption         =   "String"
+      Caption         =   "Lowercase"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   12
@@ -116,11 +132,11 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   8760
       TabIndex        =   18
-      Top             =   4680
+      Top             =   5880
       Width           =   2655
    End
    Begin VB.CommandButton Command7 
-      Caption         =   "String"
+      Caption         =   "jumlah"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   12
@@ -133,7 +149,7 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   8760
       TabIndex        =   17
-      Top             =   3840
+      Top             =   5040
       Width           =   2655
    End
    Begin VB.TextBox Text10 
@@ -149,7 +165,7 @@ Begin VB.Form Main_Form
       Height          =   600
       Left            =   11760
       TabIndex        =   16
-      Top             =   6360
+      Top             =   7560
       Width           =   4815
    End
    Begin VB.TextBox Text9 
@@ -165,7 +181,7 @@ Begin VB.Form Main_Form
       Height          =   600
       Left            =   11760
       TabIndex        =   15
-      Top             =   5520
+      Top             =   6720
       Width           =   4815
    End
    Begin VB.TextBox Text8 
@@ -181,7 +197,7 @@ Begin VB.Form Main_Form
       Height          =   600
       Left            =   11760
       TabIndex        =   14
-      Top             =   4680
+      Top             =   5880
       Width           =   4815
    End
    Begin VB.TextBox Text7 
@@ -197,11 +213,11 @@ Begin VB.Form Main_Form
       Height          =   600
       Left            =   11760
       TabIndex        =   13
-      Top             =   3840
+      Top             =   5040
       Width           =   4815
    End
-   Begin VB.CommandButton Command6 
-      Caption         =   "String"
+   Begin VB.CommandButton Pembalikan 
+      Caption         =   "Pembalikan"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   12
@@ -214,7 +230,7 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   8760
       TabIndex        =   12
-      Top             =   3000
+      Top             =   4200
       Width           =   2655
    End
    Begin VB.TextBox Text6 
@@ -230,7 +246,7 @@ Begin VB.Form Main_Form
       Height          =   600
       Left            =   11760
       TabIndex        =   11
-      Top             =   3000
+      Top             =   4200
       Width           =   4815
    End
    Begin VB.TextBox Text4 
@@ -246,7 +262,7 @@ Begin VB.Form Main_Form
       Height          =   600
       Left            =   3480
       TabIndex        =   10
-      Top             =   5520
+      Top             =   6720
       Width           =   4815
    End
    Begin VB.TextBox Main_Text 
@@ -262,11 +278,12 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   480
       TabIndex        =   9
+      Text            =   "kalimat"
       Top             =   2040
       Width           =   12975
    End
    Begin VB.CommandButton Command5 
-      Caption         =   "String"
+      Caption         =   "penggabungan"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   12
@@ -279,7 +296,7 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   480
       TabIndex        =   8
-      Top             =   6360
+      Top             =   7560
       Width           =   2655
    End
    Begin VB.CommandButton Command4 
@@ -296,7 +313,7 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   480
       TabIndex        =   7
-      Top             =   5520
+      Top             =   6720
       Width           =   2655
    End
    Begin VB.CommandButton Command3 
@@ -313,7 +330,7 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   480
       TabIndex        =   6
-      Top             =   4680
+      Top             =   5880
       Width           =   2655
    End
    Begin VB.CommandButton Command2 
@@ -330,7 +347,7 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   480
       TabIndex        =   5
-      Top             =   3840
+      Top             =   5040
       Width           =   2655
    End
    Begin VB.TextBox Text5 
@@ -346,7 +363,7 @@ Begin VB.Form Main_Form
       Height          =   600
       Left            =   3480
       TabIndex        =   4
-      Top             =   6360
+      Top             =   7560
       Width           =   4815
    End
    Begin VB.TextBox Text3 
@@ -365,7 +382,7 @@ Begin VB.Form Main_Form
       Left            =   4920
       TabIndex        =   3
       Text            =   "0"
-      Top             =   4680
+      Top             =   5880
       Width           =   975
    End
    Begin VB.CommandButton Command1 
@@ -382,7 +399,7 @@ Begin VB.Form Main_Form
       Height          =   615
       Left            =   480
       TabIndex        =   2
-      Top             =   3000
+      Top             =   4200
       Width           =   2655
    End
    Begin VB.TextBox Text1 
@@ -398,8 +415,26 @@ Begin VB.Form Main_Form
       Height          =   600
       Left            =   3480
       TabIndex        =   1
-      Top             =   3000
+      Top             =   4200
       Width           =   4815
+   End
+   Begin VB.Label Label3 
+      AutoSize        =   -1  'True
+      Caption         =   "Output Kalimat "
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   300
+      Left            =   480
+      TabIndex        =   28
+      Top             =   2880
+      Width           =   1875
    End
    Begin VB.Label Label2 
       AutoSize        =   -1  'True
@@ -435,7 +470,7 @@ Begin VB.Form Main_Form
       Index           =   1
       Left            =   6360
       TabIndex        =   24
-      Top             =   4800
+      Top             =   6000
       Width           =   645
    End
    Begin VB.Label Mid_Label 
@@ -454,7 +489,7 @@ Begin VB.Form Main_Form
       Index           =   0
       Left            =   3960
       TabIndex        =   23
-      Top             =   4800
+      Top             =   6000
       Width           =   510
    End
    Begin VB.Label Label1 
@@ -483,11 +518,15 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
-Main_Text = Main_Text + Text1
+Output_text = Main_Text + Text1
+End Sub
+
+Private Sub Command10_Click()
+Output_text = Right(Main_Text, 3)
 End Sub
 
 Private Sub Command2_Click()
-Main_Text = UCase(Main_Text)
+Output_text = UCase(Main_Text)
 End Sub
 
 Private Sub Command3_Click()
@@ -495,11 +534,36 @@ Dim Awal As Integer
 Dim n As Integer
 Awal = Text3(0)
 n = Text3(1)
-Main_Text = Mid(Main_Text, Awal, n)
+Output_text = Mid(Main_Text, Awal, n)
 End Sub
 
 Private Sub Command4_Click()
-Main_Text = Text4
+Output_text = Text4
+End Sub
+
+Private Sub Command6_Click()
+
+End Sub
+
+Private Sub Command5_Click()
+Output_text = String(10, (Main_Text))
+
+End Sub
+
+Private Sub Command7_Click()
+Output_text = Len(Main_Text)
+End Sub
+
+Private Sub Command8_Click()
+Output_text = LCase(Main_Text)
+End Sub
+
+Private Sub Command9_Click()
+Output_text = Left(Main_Text, 3)
+End Sub
+
+Private Sub Pembalikan_Click()
+Output_text = StrReverse(Main_Text)
 End Sub
 
 Private Sub Reset_Command_Click()
